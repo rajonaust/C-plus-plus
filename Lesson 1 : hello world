@@ -1,0 +1,9 @@
+#include <stdio.h> // C header file
+#include <iostream> // C++ header file
+using namespace std;
+int main() 
+{
+	printf("Hello World\n"); // for C
+	cout<<"Hello World\n"; 	// for C++
+	return 0;
+}
