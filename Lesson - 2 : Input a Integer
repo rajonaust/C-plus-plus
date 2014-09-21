@@ -1,0 +1,37 @@
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+int main()
+{
+    // For C
+
+    int a , b ;
+    scanf("%d%d",&a,&b);
+    int sum = a + b ;
+    int sub = a - b ;
+    int mul = a * b ;
+    int div = a / b ;
+    int mod = a % b ;
+    printf("Sum : %d\n",sum);
+    printf("Sub : %d\n",sub);
+    printf("Mul : %d\n",mul);
+    printf("Div : %d\n",div);
+    printf("Mod : %d\n",mod);
+
+    // For C++
+
+    int c , d ;
+    cin >> c >> d ;
+    sum = a + b ;
+    sub = a - b ;
+    mul = a * b ;
+    div = a / b ;
+    mod = a % b ;
+    cout << "Sum : " << sum << endl;
+    cout << "Sub : " << sub << endl;
+    cout << "Mul : " << mul << endl;
+    cout << "Div : " << div << endl;
+    cout << "Mod : " << mod << endl;
+
+    return 0;
+}
