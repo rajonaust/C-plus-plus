@@ -22,11 +22,11 @@ int main()
 
     int c , d ;
     cin >> c >> d ;
-    sum = a + b ;
-    sub = a - b ;
-    mul = a * b ;
-    div = a / b ;
-    mod = a % b ;
+    sum = c + d ;
+    sub = c - d ;
+    mul = c * d ;
+    div = c / d ;
+    mod = c % d ;
     cout << "Sum : " << sum << endl;
     cout << "Sub : " << sub << endl;
     cout << "Mul : " << mul << endl;
