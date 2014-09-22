@@ -1,0 +1,31 @@
+// Function / Method is a collection of variables and different operations . According to data type it can return a value or nothing .
+// Class is collection of functions / methods , variable .
+// Object refers particular class . So object is also combination of variables , data structures and functions / methods .
+#include <iostream>
+using namespace std;
+class A
+{
+    public:
+    void show() // Method for class A
+    {
+        cout << "This is class A " << endl;
+    }
+};
+class B
+{
+    public:
+    void show() // Method for class B
+    {
+        cout << "This is class B " << endl;
+    }
+};
+int main()
+{
+    A objA; // Create object for class A
+    B objB; // Create object for class B
+
+    objA.show(); // Call method show() of class A
+    objB.show(); // Call Method show() of class B
+
+    return 0;
+}
