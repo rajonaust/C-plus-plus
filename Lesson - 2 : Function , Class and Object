@@ -25,7 +25,7 @@ int main()
     B objB; // Create object for class B
 
     objA.show(); // Call method show() of class A
-    objB.show(); // Call Method show() of class B
+    objB.show(); // Call method show() of class B
 
     return 0;
 }
