@@ -1,0 +1,49 @@
+// A class constructor is a special member function of a class that is executed whenever create a new objects of that class .
+// A constructor will have exact same name as the class .
+// It does not have any return type at all , not even void .
+// One class can have one or constructors by changing number or data type of arguments .
+// Constructors can be very useful for setting initial values for certain member variables .
+
+// A destructor is a special member function of a class that is executed whenever an object of it's class goes out of scope or whenever the delete expression is applied to a pointer to the object of that class .
+// A destructor will have exact same name as the class prefixed with a tilde (~) and it can neither return a value nor can it take any parameters .
+// Destructor can be very useful for releasing resources before coming out of the program like closing files , releasing memories etc .
+// If a method of class called recursively another constructor of that class , then destructor method will also call for releasing resources for calling recursively those constructor .
+
+// This keyword refers the global variable and functions of class .
+#include <iostream>
+using namespace std;
+class A
+{
+    int x = 100 ;
+    public:
+    A() // Constructor for class A with no parameter .
+    {
+        cout << "Constructor for class A without any parameter ." << endl << endl ;
+    }
+    A(int x) // // Constructor for class A with an integer parameter .
+    {
+        cout << "Constructor for class A with an integer parameter ." << endl ;
+        cout << "Global variable value is : " << this->x << endl ;
+        cout << "Local variable value is : " << x << endl << endl ;
+    }
+    void test()
+    {
+        cout<< "This is Test function of class A " << endl ;
+        A();
+        cout << endl << "Called a constructor of the class recursively . And resources also released when a constructor called . " << endl << endl ;
+    }
+    ~A() // Destructor for class A .
+    {
+        cout << "Resources Release ." << endl ;
+    }
+};
+int main()
+{
+    A obj1 ; // Create a object for class A with no parameter .
+
+    A ob2j(50); // Create a object for class A with an integer parameter .
+
+    obj1.test(); // Called test() function with object obj1 .
+
+    return 0;
+}
