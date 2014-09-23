@@ -13,7 +13,7 @@
 // Destructor can be very useful for releasing resources before coming out of the program like closing files , releasing memories etc .
 // If a method / constructor of a class called recursively another constructors of that class , then destructor method will also call for releasing resources for calling recursively those constructor .
 
-/* This keyword */
+/* this keyword */
 
 // This keyword refers the global variable and functions of class .
 #include <iostream>
