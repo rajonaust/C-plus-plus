@@ -7,7 +7,7 @@
 // A destructor is a special member function of a class that is executed whenever an object of it's class goes out of scope or whenever the delete expression is applied to a pointer to the object of that class .
 // A destructor will have exact same name as the class prefixed with a tilde (~) and it can neither return a value nor can it take any parameters .
 // Destructor can be very useful for releasing resources before coming out of the program like closing files , releasing memories etc .
-// If a method of class called recursively another constructor of that class , then destructor method will also call for releasing resources for calling recursively those constructor .
+// If a method / constructor of a class called recursively another constructors of that class , then destructor method will also call for releasing resources for calling recursively those constructor .
 
 // This keyword refers the global variable and functions of class .
 #include <iostream>
@@ -30,7 +30,7 @@ class A
     {
         cout<< "This is Test function of class A " << endl ;
         A();
-        cout << endl << "Called a constructor of the class recursively . And resources also released when a constructor called . " << endl << endl ;
+        cout << endl << "Called a constructor of the class recursively . And resources also released before back in this function . " << endl << endl ;
     }
     ~A() // Destructor for class A .
     {
