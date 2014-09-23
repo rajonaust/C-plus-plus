@@ -9,9 +9,10 @@
 /* Destructor */
 
 // A destructor is a special member function of a class that is executed whenever an object of it's class goes out of scope or whenever the delete expression is applied to a pointer to the object of that class .
-// A destructor will have exact same name as the class prefixed with a tilde (~) and it can neither return a value nor can it take any parameters .
+// A destructor will have exact same name as the class prefixed with a tilde (~) and it can neither return a value nor can it take any parameters . But it can be called by object from another class or in same class .
 // Destructor can be very useful for releasing resources before coming out of the program like closing files , releasing memories etc .
 // If a method / constructor of a class called recursively another constructors of that class , then destructor method will also call for releasing resources for calling recursively those constructor .
+// It only and only release resources , not change any variable's value and contdition of method of a class .
 
 /* this keyword */
 
