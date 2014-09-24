@@ -1,6 +1,6 @@
 // A non-member function or class can access the private , protected and public variables and methods of a class if it is declared a friend of that class .
 // Use the keyword friend .
-// Java has no friend .
+// Java has no friend class or function .
 // Important features :
 // 1. Friendships are not symmetric : If class A is a friend of class B , class B is not automatically a friend of class A .
 // 2. Friendships are not transitive : If class A is a friend of class B , and class B is a friend of class C , class A is not automatically a friend of class C .
