@@ -1,0 +1,44 @@
+// A non-member function or class can access the private , protected and public variables and methods of a class if it is declared a friend of that class .
+// Use the keyword friend .
+// Important features :
+// 1. Friendships are not symmetric : If class A is a friend of class B , class B is not automatically a friend of class A .
+// 2. Friendships are not transitive : If class A is a friend of class B , and class B is a friend of class C , class A is not automatically a friend of class C .
+// 3 .Friendships are not inherited : A friend of class base is not automatically a friend of class Derived and vice versa ; equally if base is a friend of another class , Derived is not automatically a friend and vice versa .
+#include <iostream>
+using namespace std ;
+class Calculation
+{
+    friend int Sum(Calculation obj); // Function is friend
+    friend class Sub ; // Class is friend
+private:
+    int a , b ;
+public:
+    Calculation(int x,int y)
+    {
+        a=x;
+        b=y;
+    }
+};
+class Sub
+{
+public:
+    int Subtraction(Calculation obj)
+    {
+        return obj.a-obj.b;
+    }
+};
+int Sum(Calculation obj)
+{
+    return obj.a+obj.b ;
+}
+int main()
+{
+    Calculation obj(50,10); // Create object for Calculation class
+    Sub ob ; // Crate object for Sub class
+
+    cout<< "Summation of the numbers is = " << Sum(obj) << endl ;
+
+    cout<< "Subtraction of the number is = " << ob.Subtraction(obj) << endl ;
+
+    return 0 ;
+}
