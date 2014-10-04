@@ -1,0 +1,75 @@
+/* Inheritance */
+// Inheritance can be defined as the process where one class's object acquires the properties of another class .
+// By the use of inheritance the information is made manageable in a hierarchical order .
+
+/* Base Class */
+// The class from which a derived class is derived is called a base class .
+// A base class may have one or more derived classes .
+
+/* Derived Class */
+// A class derived from another class is called a derived class .
+// A derived class can able to extend one or more base classes .
+// A derived class inherits all of the public and protected members of its base classes .
+// Whenever a constructor of derived class is called , also it's base classes must be called , if the base classes contain at least a constructor and it this constructor contain at least one argument .
+
+#include <iostream>
+using namespace std;
+class teacherInfo // Base class
+{
+protected:
+    string designation ;
+public:
+    teacherInfo(string a)
+    {
+        designation = a ;
+    }
+};
+class Member // Base class
+{
+protected:
+    string name ;
+    long long contactNumber ;
+public:
+    Member(string a , long long b)
+    {
+        name = a ;
+        contactNumber = b ;
+    }
+};
+class Student : Member // Derived class
+{
+private:
+    string id ;
+public:
+    Student(string a,long long b, string c) : Member (a,b)
+    {
+        id = c ;
+    }
+    void info()
+    {
+        cout << "Student Name : " << name << " .\nContact No. : " <<contactNumber<<" .\nID : "<<id<<" .\n\n";
+    }
+};
+class Teacher : Member , teacherInfo // Derived class with multiple inheritance
+{
+private:
+    int salary ;
+public:
+    Teacher(string a,long long b,int c,string d) : Member(a,b) , teacherInfo(d)
+    {
+        salary = c ;
+    }
+    void info()
+    {
+        cout << "Teacher Name : " << name << " .\nContact No. : " <<contactNumber<<" .\nSalary : "<<salary<<" tk .\nDesignation  : "<<designation<<" .\n\n";
+    }
+};
+int main()
+{
+    Student objStudent("Rajon Bardhan", 88001672652816 ,"11.01.04.122"); // Create object of class Student
+    Teacher objTeacher("Mir Tasreef Nayeem",88001912070185,50000,"Lecturer"); // Create object of class Teacher
+
+    objStudent.info();
+    objTeacher.info();
+    return 0 ;
+}
