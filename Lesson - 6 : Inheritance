@@ -10,7 +10,7 @@
 // A class derived from another class is called a derived class .
 // A derived class can able to extend one or more base classes .
 // A derived class inherits all of the public and protected members of its base classes .
-// Whenever a constructor of derived class is called , also it's base classes must be called , if the base classes contain at least a constructor and it this constructor contain at least one argument .
+// Whenever a constructor of derived class is called , also it's base classes must be called , if the base classes contain at least a constructor and this constructor contain at least one argument .
 
 #include <iostream>
 using namespace std;
